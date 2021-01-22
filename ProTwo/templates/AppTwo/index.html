@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static "AppTwo/css/mystyle.css" %}" />
+    <title>Vartotoju sarasas</title>
+</head>
+<body>
+    <h1>Sveiki, tai yra sugeneruoti vartotojai</h1>
+    <p></p>
+
+
+        {% if vartotojai %}
+
+            {% for useris in vartotojai %}
+            <ol>
+                <li>User info</li>
+                    <ul>
+                        <li>First Name: {{ useris.first_name }}</li>
+                        <li>Last Name: {{ useris.last_name }}</li>
+                        <li>Email: {{ useris.email }}</li>
+                    </ul>
+
+            </ol>
+            {% endfor %}
+
+
+
+            {% else %}
+                <p>No users found.</p>
+            {% endif %}
+
+</body>
+</html>
