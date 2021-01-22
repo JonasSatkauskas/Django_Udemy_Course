@@ -20,9 +20,9 @@ from AppThree import views as APPTHREEviews
 from AppFour import views as APPFOURviews
 
 urlpatterns = [
-    path('', APPTWOviews.index, name='index'),
+    path('users/', APPTWOviews.index, name='index'),
     path('appthree/', APPTHREEviews.index, name='index'),
-    path('help/', APPTHREEviews.help, name='help'),
+    path('', APPTHREEviews.help, name='help'),
     path('admin/', admin.site.urls),
     path('pasveikinimas/', APPFOURviews.pasveikinimas, name='pasveikinimas')
 ]
