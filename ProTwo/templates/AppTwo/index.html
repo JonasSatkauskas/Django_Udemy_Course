@@ -13,17 +13,18 @@
 
         {% if vartotojai %}
 
-            {% for useris in vartotojai %}
+
             <ol>
+                {% for useris in vartotojai %}
                 <li>User info</li>
                     <ul>
                         <li>First Name: {{ useris.first_name }}</li>
                         <li>Last Name: {{ useris.last_name }}</li>
                         <li>Email: {{ useris.email }}</li>
                     </ul>
-
+                {% endfor %}
             </ol>
-            {% endfor %}
+
 
 
 
