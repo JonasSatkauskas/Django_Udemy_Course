@@ -21,6 +21,7 @@ from AppFour import views as APPFOURviews
 
 urlpatterns = [
     path('users/', APPTWOviews.index, name='index'),
+    path('form/', APPTWOviews.user_form_view, name='form'),
     path('appthree/', APPTHREEviews.index, name='index'),
     path('', APPTHREEviews.help, name='help'),
     path('admin/', admin.site.urls),
